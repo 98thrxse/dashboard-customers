@@ -1,0 +1,89 @@
+@keyframes rotateClockwise {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    25% {
+        transform: rotate3d(0, 0, 1, 90deg);
+    }
+
+    50% {
+        transform: rotate3d(0, 0, 1, 180deg);
+    }
+
+    75% {
+        transform: rotate3d(0, 0, 1, 270deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+@keyframes rotateNotClockwise {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, -360deg);
+    }
+}
+
+.appbar {
+    position: fixed;
+    padding: 28px;
+    width: 300px;
+    height: 100px;
+    z-index: 2;
+}
+
+.appbar-button {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+.appbar-icon {
+    height: 37px;
+    float: left;
+    animation: rotateClockwise 5s infinite;
+}
+
+.appbar:hover .appbar-icon {
+    animation: rotateNotClockwise 1s infinite;
+}
+
+.appbar-title {
+    color: #000;
+    font-size: 26px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    margin-left: 8px;
+}
+
+.appbar-version {
+    color: #838383;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    margin-left: 4px;
+}
+
+@media only screen and (max-width: 600px) {
+    .appbar-title {
+        display: none;
+    }
+
+    .appbar-version {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .appbar {
+        display: none;
+    }
+}

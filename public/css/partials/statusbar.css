@@ -1,0 +1,61 @@
+@keyframes handwave {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    25% {
+        transform: rotate3d(0, 0, 1, 25deg);
+    }
+
+    50% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    75% {
+        transform: rotate3d(0, 0, 1, 25deg);
+    }
+
+    100% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+}
+
+.statusbar {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    background-color: #FAFBFF;
+    padding: 28px;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+}
+
+.statusbar-title {
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+}
+
+.statusbar-hand {
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.statusbar-text {
+    cursor: pointer;
+}
+
+.statusbar-title:hover .statusbar-hand {
+    animation: handwave 1s;
+}
+
+@media only screen and (max-width: 300px) {
+    .statusbar {
+        display: none;
+    }
+}

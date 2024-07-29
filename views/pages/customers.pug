@@ -1,0 +1,16 @@
+extends ../layouts/main
+
+block content
+    div#customers.customers
+        div.customers-header
+            div.customers-header-info
+                label.customers-info-title All Customers
+                button#customers-info-button.customers-info-button(onclick='customers.update()')
+            div.customers-header-search
+                input#customers-search-input.customers-search-input(type='text' placeholder='Search' onkeyup='customers.search()')
+        table.customers-table
+            thead#customers-thead
+            tbody#customers-tbody
+        div.customers-footer
+            label#customers-footer-hint.customers-footer-hint
+            ul#customers-footer-controls.customers-footer-controls

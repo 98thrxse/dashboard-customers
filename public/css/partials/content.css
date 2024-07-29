@@ -1,0 +1,22 @@
+.content {
+    overflow: hidden;
+    margin-left: 300px;
+    padding: 100px 28px 28px 28px;
+    transition: margin-left 0.5s ease;
+}
+
+.content-collapse {
+    margin-left: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .content {
+        display: none;
+    }
+}
